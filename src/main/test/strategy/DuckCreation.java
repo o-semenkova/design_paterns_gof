@@ -1,4 +1,4 @@
-package unit;
+package strategy;
 
 import strategy.ducks.Duck;
 import strategy.behavior.FlyNoWay;
