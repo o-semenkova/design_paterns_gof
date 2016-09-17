@@ -12,4 +12,6 @@ public interface Subject {
     void notifyObservers(String temperature, String humidity);
     void notifyObservers();
     boolean setChanged();
+    boolean hasChaged();
+    void clearChanged();
 }

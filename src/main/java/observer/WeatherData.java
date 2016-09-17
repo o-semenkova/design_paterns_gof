@@ -33,11 +33,11 @@ public class WeatherData implements Subject {
     }
 
     public void notifyObservers(String temperature, String humidity) {
-        if(changed){
+        if(this.changed){
             for(Observer current: this.all){
                 current.update(temperature, humidity);
             }
-            changed = false;
+            clearChanged();
         }
     }
 
@@ -47,6 +47,14 @@ public class WeatherData implements Subject {
 
     public boolean setChanged() {
         return this.changed = true;
+    }
+
+    public boolean hasChaged() {
+        return this.changed;
+    }
+
+    public void clearChanged() {
+        this.changed = false;
     }
 
     public void measurementsChanged(){
