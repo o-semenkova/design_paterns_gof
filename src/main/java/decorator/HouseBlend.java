@@ -3,12 +3,14 @@ package decorator;
 /**
  * Created by osemenkova on 9/19/2016.
  */
-public class HouseBlend implements Beverage {
+public class HouseBlend extends Beverage {
 
-    private double price = 1.2;
+    public HouseBlend(double price){
+        this.setPrice(price);
+    }
 
     public double cost() {
-        return price;
+        return this.getPrice();
     }
 
     public void getDescription(){

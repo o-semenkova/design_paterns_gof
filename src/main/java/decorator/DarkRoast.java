@@ -3,11 +3,14 @@ package decorator;
 /**
  * Created by osemenkova on 9/18/2016.
  */
-public class DarkRoast implements Beverage {
-    private double price = 0.66;
+public class DarkRoast extends Beverage {
+
+    public DarkRoast(double price){
+        this.setPrice(price);
+    }
 
     public double cost() {
-        return price;
+        return this.getPrice();
     }
 
     public void getDescription(){
