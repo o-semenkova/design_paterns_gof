@@ -15,9 +15,12 @@ public class ChickagoStylePizzeriaFactory extends AbstractPizzeriaFactory {
     Pizza create(String type) {
         if (type.equals("cheese")){
             pizza = new ChikagoCheesePizza();
+            pizza.setType("cheese");
         }else if(type.equals("chicken")){
             pizza = new ChikagoChickenPizza();
+            pizza.setType("chicken");
         }
+        pizza.setRegion("Chikago");
         return pizza;
     }
 }

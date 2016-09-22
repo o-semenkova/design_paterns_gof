@@ -14,9 +14,12 @@ public class NYStylePizzeriaFactory extends AbstractPizzeriaFactory {
     Pizza create(String type) {
         if (type.equals("cheese")){
             pizza = new NYCheesePizza();
+            pizza.setType("cheese");
         }else if(type.equals("chicken")){
             pizza = new NYChickenPizza();
+            pizza.setType("chicken");
         }
+        pizza.setRegion("NY");
         return pizza;
     }
 }

@@ -6,6 +6,7 @@ package factory.pizza;
 public abstract class Pizza {
 
     String type;
+    String region;
 
     public void prepare(){
         System.out.println("Preparing pizza");
@@ -16,9 +17,7 @@ public abstract class Pizza {
     public void cut(){
         System.out.println("Cutting pizza");
     }
-    public void box(){
-        System.out.println("Cutting pizza");
-    }
+    public void box(){System.out.println("Boxing pizza");}
 
 
     public String getType() {
@@ -29,4 +28,11 @@ public abstract class Pizza {
         this.type = type;
     }
 
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
 }
