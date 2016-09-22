@@ -1,4 +1,4 @@
-package factory;
+package factory.pizza;
 
 /**
  * Created by osemenkova on 9/21/2016.
@@ -20,6 +20,7 @@ public abstract class Pizza {
         System.out.println("Cutting pizza");
     }
 
+
     public String getType() {
         return type;
     }
@@ -27,4 +28,5 @@ public abstract class Pizza {
     public void setType(String type) {
         this.type = type;
     }
+
 }
