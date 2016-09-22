@@ -1,9 +1,9 @@
-package factory;
+package abstract_factory;
 
-import factory.pizza.Pizza;
-import factory.pizzeria.AbstractPizzeriaFactory;
-import factory.pizzeria.ChickagoStylePizzeriaFactory;
-import factory.pizzeria.NYStylePizzeriaFactory;
+import abstract_factory.pizza.Pizza;
+import abstract_factory.pizzeria.AbstractPizzeriaFactory;
+import abstract_factory.pizzeria.ChickagoStylePizzeriaFactory;
+import abstract_factory.pizzeria.NYStylePizzeriaFactory;
 
 /**
  * Created by osemenkova on 9/22/2016.
