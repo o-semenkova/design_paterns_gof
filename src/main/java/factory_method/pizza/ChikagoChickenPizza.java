@@ -1,4 +1,4 @@
-package abstract_factory.pizza;
+package factory_method.pizza;
 
 /**
  * Created by osemenkova on 9/21/2016.
