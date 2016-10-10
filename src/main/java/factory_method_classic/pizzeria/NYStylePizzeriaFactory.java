@@ -1,8 +1,8 @@
-package factory_method.pizzeria;
+package factory_method_classic.pizzeria;
 
-import factory_method.pizza.NYCheesePizza;
-import factory_method.pizza.NYChickenPizza;
-import factory_method.pizza.Pizza;
+import factory_method_classic.pizza.NYCheesePizza;
+import factory_method_classic.pizza.NYChickenPizza;
+import factory_method_classic.pizza.Pizza;
 
 /**
  * Created by osemenkova on 9/22/2016.

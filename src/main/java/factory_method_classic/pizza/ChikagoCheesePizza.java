@@ -1,4 +1,4 @@
-package factory_method.pizza;
+package factory_method_classic.pizza;
 
 /**
  * Created by osemenkova on 9/22/2016.
