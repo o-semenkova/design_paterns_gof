@@ -1,4 +1,6 @@
-package command;
+package command.commands.light;
+
+import command.Command;
 
 /**
  * Created by osemenkova on 10/10/2016.
@@ -13,5 +15,9 @@ public class LightOnCommand implements Command {
 
     public void execute() {
         light.on();
+    }
+
+    public void undo() {
+        light.off();
     }
 }

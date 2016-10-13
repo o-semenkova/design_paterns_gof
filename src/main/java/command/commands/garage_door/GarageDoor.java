@@ -1,4 +1,4 @@
-package command;
+package command.commands.garage_door;
 
 /**
  * Created by osemenkova on 10/10/2016.
