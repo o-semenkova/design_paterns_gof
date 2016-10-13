@@ -1,6 +1,6 @@
-package abstract_factory.pizzeria;
+package factory_method_classic.pizzeria;
 
-import abstract_factory.pizza.Pizza;
+import factory_method_classic.pizza.Pizza;
 
 /**
  * Created by osemenkova on 9/21/2016.

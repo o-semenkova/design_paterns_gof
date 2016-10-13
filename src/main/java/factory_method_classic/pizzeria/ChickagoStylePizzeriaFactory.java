@@ -1,8 +1,8 @@
-package abstract_factory.pizzeria;
+package factory_method_classic.pizzeria;
 
-import abstract_factory.pizza.CheesePizza;
-import abstract_factory.pizza.ChickenPizza;
-import abstract_factory.pizza.Pizza;
+import factory_method_classic.pizza.ChikagoCheesePizza;
+import factory_method_classic.pizza.ChikagoChickenPizza;
+import factory_method_classic.pizza.Pizza;
 
 /**
  * Created by osemenkova on 9/22/2016.
@@ -10,15 +10,14 @@ import abstract_factory.pizza.Pizza;
 public class ChickagoStylePizzeriaFactory extends AbstractPizzeriaFactory {
 
     Pizza pizza;
-    PizzaIngridientFactory ingridientFactory = new ChikagoPizzaIngridientFactory();
 
     @Override
     Pizza create(String type) {
         if (type.equals("cheese")){
-            pizza = new CheesePizza(ingridientFactory);
+            pizza = new ChikagoCheesePizza();
             pizza.setType("cheese");
         }else if(type.equals("chicken")){
-            pizza = new ChickenPizza(ingridientFactory);
+            pizza = new ChikagoChickenPizza();
             pizza.setType("chicken");
         }
         pizza.setRegion("Chikago");
