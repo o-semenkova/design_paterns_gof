@@ -9,6 +9,7 @@ import command.commands.light.LightOnCommand;
 import command.commands.stereo.Stereo;
 import command.commands.stereo.StereoOffCommand;
 import command.commands.stereo.StereoOnCDCommand;
+import command.macrocommand.MacroCommand;
 
 /**
  * Created by osemenkova on 10/10/2016.
@@ -43,5 +44,18 @@ public class Rele {
         remoteControl.offButtonWasPushed(0);
         remoteControl.offButtonWasPushed(1);
         remoteControl.offButtonWasPushed(2);
+
+        /*Macro command testing code*/
+
+        Command[] partyOn = {garageDoorOpenCommand, stereoOnCDCommand };
+        Command[] partyOff = {stereoOffCommand, garageDoorClosedCommand};
+        MacroCommand partyGoCommand = new MacroCommand(partyOn);
+        MacroCommand partyFinishCommand = new MacroCommand(partyOff);
+
+        remoteControl.setCommand(3, partyGoCommand, partyFinishCommand);
+
+        remoteControl.onButtonWasPushed(3);
+        remoteControl.offButtonWasPushed(3);
+        remoteControl.undoButtonWasPushed();
     }
 }
