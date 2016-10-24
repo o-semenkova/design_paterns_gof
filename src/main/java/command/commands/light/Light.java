@@ -1,4 +1,4 @@
-package command;
+package command.commands.light;
 
 /**
  * Created by osemenkova on 10/10/2016.
