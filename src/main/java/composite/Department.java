@@ -1,5 +1,7 @@
 package composite;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -9,9 +11,9 @@ public class Department extends SupermarketItem {
 
     private List<SupermarketItem> units;
 
-    public Department(String name, String type, List<SupermarketItem> units) {
+    public Department(String name, String type) {
         super(name, type);
-        this.units = units;
+        this.units = new ArrayList<SupermarketItem>();
     }
 
     @Override
@@ -28,4 +30,17 @@ public class Department extends SupermarketItem {
         return units.get(index);
     }
 
+    @Override
+    public void print(){
+        System.out.println(this.toString());
+        System.out.println();
+        System.out.println("Items related to " + this.getName() + " " + this.getType() + ":");
+        System.out.println("--------------------------");
+        Iterator iterator = units.iterator();
+        while(iterator.hasNext()){
+            SupermarketItem item = (SupermarketItem) iterator.next();
+            item.print();
+        }
+        System.out.println("--------------------------");
+    }
 }

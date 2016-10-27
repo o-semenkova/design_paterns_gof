@@ -23,11 +23,11 @@ public abstract class SupermarketItem {
         throw new UnsupportedOperationException();
     }
 
-    public void calculateTotalPrice(){
+    public double calculateTotalPrice(int quantity){
         throw new UnsupportedOperationException();
     }
 
-    public void getPricePerSingle(){
+    public double getPricePerSingle(){
         throw new UnsupportedOperationException();
     }
 
@@ -37,5 +37,15 @@ public abstract class SupermarketItem {
 
     public String getType() {
         return this.type;
+    }
+
+    public void print(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", type='" + type + '\'';
     }
 }
