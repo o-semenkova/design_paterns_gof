@@ -1,5 +1,6 @@
 import composite.Department;
 import composite.Good;
+import composite.Manager;
 import composite.SupermarketItem;
 
 /**
@@ -20,9 +21,11 @@ public class Supermarket {
         supermarket.add(meatDepartment);
         supermarket.add(cashDeskGood);
 
-        supermarket.print();
-
-        double totalPrice = cashDeskGood.calculateTotalPrice(5);
+        Manager man = new Manager(supermarket);
+        man.printVegetarianGoods();
+        man.print();
+        man.setAllItems(cashDeskGood);
+        double totalPrice = man.calculateTotalPrice(2);
         System.out.println("Total price = " + totalPrice);
     }
 }

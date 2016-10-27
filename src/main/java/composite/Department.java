@@ -10,6 +10,7 @@ import java.util.List;
 public class Department extends SupermarketItem {
 
     private List<SupermarketItem> units;
+    private Iterator iterator;
 
     public Department(String name, String type) {
         super(name, type);
@@ -42,5 +43,13 @@ public class Department extends SupermarketItem {
             item.print();
         }
         System.out.println("--------------------------");
+    }
+
+    @Override
+    public Iterator createIterator() {
+        if(this.iterator == null){
+            iterator = new CompositeIterator(this.units.iterator());
+        }
+        return this.iterator;
     }
 }
